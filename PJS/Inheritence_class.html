@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Parent class
+class Produce {
+  constructor(name) {
+    this.name = name;
+  }
+
+  // Method defined in the parent class
+  introduce() {
+    return `I am ${this.name}.`;
+  }
+}
+
+// Child class inheriting from the parent class
+class Fruit extends Produce {
+  constructor(name, color) {
+    super(name); // Call the parent class constructor with child context
+    this.color = color;
+  }
+
+  // Method defined in the child class
+  isTasty() {
+    return `${this.name} is delicious!`;
+  } 
+}
+
+// Another child class inheriting from the parent class
+class Vegetable extends Produce {
+  constructor(name, type) {
+    super(name); // Call the parent class constructor with child context
+    this.type = type;
+  }
+
+  // Method defined in the child class
+  isHealthy() {
+    return `${this.name} is good for you!`;
+  }
+}
+
+// Create instances of the child classes
+const apple = new Fruit('Apple', 'red');
+const spinach = new Vegetable('Spinach', 'leafy');
+
+console.log(apple.introduce());    // Output: I am Apple.
+console.log(apple.isTasty());      // Output: Apple is delicious!
+
+console.log(spinach.introduce());  // Output: I am Spinach.
+console.log(spinach.isHealthy());  // Output: Spinach is good for you!
+
+    </script>
+</body>
+</html>
+
+
+
+<!--
+Produce is the parent class, which both Fruit and Vegetable
+inherit from.
+Both Fruit and Vegetable classes have their own specific 
+properties (color for fruits, type for vegetables) 
+and methods (isTasty for fruits, isHealthy for vegetables), 
+in addition to inheriting the introduce method from the Produce
+class.
+
+Instances of Fruit and Vegetable can access both their own methods
+and properties, as well as those inherited from the Produce class.
+-->

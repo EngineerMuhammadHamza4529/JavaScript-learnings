@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+<body>
+    
+    <form id="studentForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required><br><br>
+
+        <label for="per">Percentage</label>
+        <input type="text" id="per"><br><br>
+
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" required><br><br>
+
+        <label>Remarks</label>
+        <input type="text" id="remark"><br><br>
+
+        <button type="button" onclick="addStudent()">Add Student</button><br>
+        <button type="button" onclick="replaceStudent()">Replace First Student</button>
+    </form>
+    
+    <button onclick="removeStudent()">Remove First Student</button>
+
+    <h3>Students List</h3>
+    <ul id="studentList"></ul>
+
+    <script>
+        // Add a new student
+        function addStudent() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const grade = document.getElementById('grade').value;
+            const remark = document.getElementById('remark').value;
+            const per = document.getElementById('per').value;
+
+            // Create a new <li> element for the student
+            const newStudent = document.createElement('li');
+            newStudent.textContent = `Name: ${name}, Age: ${age}, Percentage: ${per} Grade: ${grade} , Remark: ${remark}`;
+
+            // Append the new student to the list
+            const studentList = document.getElementById('studentList');
+            studentList.appendChild(newStudent);
+
+            // Clear form fields after adding the student
+            document.getElementById('name').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('grade').value = '';
+            document.getElementById('remark').value = '';
+        }
+
+        // Remove the first student from the list
+        function removeStudent() {
+            const studentList = document.getElementById('studentList');
+            if (studentList.firstChild) {
+                studentList.removeChild(studentList.firstChild); // Remove the first student
+            } else {
+                alert("No students to remove!");
+            }
+        }
+
+        // Replace the first student with a new one
+        function replaceStudent() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const grade = document.getElementById('grade').value;
+            const remark = document.getElementById('remark').value;
+
+            // Create a new <li> element for the new student
+            const newStudent = document.createElement('li');
+            newStudent.textContent = `Name: ${name}, Age: ${age}, Grade: ${grade} , Remark: ${remark}`;
+
+            const studentList = document.getElementById('studentList');
+            if (studentList.firstChild) {
+                studentList.replaceChild(newStudent, studentList.firstChild); // Replace the first student
+            } else {
+                alert("No students to replace!");
+            }
+
+            // Clear form fields after replacing the student
+            document.getElementById('name').value = '';
+            document.getElementById('age').value = '';
+            document.getElementById('grade').value = '';
+            document.getElementById('remark').value = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+
+    <script>
+
+        let numbers = [1, 2, 3, 4, 5];
+
+        let [first, second, third] = numbers;
+
+        console.log(first); // Output: 1
+        console.log(second); // Output: 2
+        console.log(third); // Output: 3
+
+    </script>
+
+        <!-- You can also use array destructuring with the rest syntax (...) 
+        to capture the remaining elements of an array: -->
+
+        <!-- <script>
+
+        let numbers = [1, 2, 3, 4, 5];
+
+        let [first, ...rest] = numbers;
+
+        console.log(first); // Output: 1
+        console.log(rest); // Output: [2, 3, 4, 5]
+
+        </script> -->
+
+
+
+        <!-- Array destructuring can also be used in function parameter definitions to directly 
+        extract values from arrays passed as arguments: -->
+
+        <!-- <script>
+            function sum([a, b, c]) {
+                return a + b + c;
+                }
+
+                let numbers = [1, 2, 3];
+                console.log(sum(numbers)); // Output: 6
+        </script> -->
+
+
+
+        <!-- Array destructuring is a powerful feature in JavaScript that simplifies working with arrays 
+        and makes code more expressive and concise. -->
+    
+</body>
+</html>

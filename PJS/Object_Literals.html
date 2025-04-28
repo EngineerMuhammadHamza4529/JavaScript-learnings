@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+    <!-- <script>
+
+            // let person = {
+            // firstName: "John",
+            // lastName: "Doe",
+            // age: 30,
+            // fullName: function() {
+            //     return this.firstName + " " + this.lastName;
+            // }
+            // };
+            
+            // console.log(person.firstName); // Output: "John"
+            // console.log(person["lastName"]); // Output: "Doe"
+            // console.log(person.fullName()); // Output: "John Doe"
+            // person.gender = "Male";
+            // person.age = 35;
+    </script> -->
+
+
+        <!--Object Literals-->
+    <!-- <script>
+        // Define variables
+        let propertyName = 'foo';
+        let propertyValue = 'bar';
+    
+
+// Create an object literal with computed property names
+           const myObject = {
+         [propertyName]: propertyValue 
+    };
+
+        console.log(myObject); // Output: { foo: 'bar' }
+
+    </script> -->
+
+   
+
+ <!--You can create an object literal within a constructor 
+    function using the this keyword to refer 
+    to the newly created object. Here's an example:-->
+
+    <script>
+        function Person(name, age) {
+  // Create an object literal within the constructor function
+  this.name = name;
+  this.age = age;
+}
+
+// Create instances of Person using the constructor function
+const person1 = new Person('Alice', 30);
+const person2 = new Person('Bob', 25);
+
+console.log(person1); // Output: Person { name: 'Alice', age: 30 }
+console.log(person2); // Output: Person { name: 'Bob', age: 25 }
+
+    </script>
+
+
+  
+</body>
+</html>

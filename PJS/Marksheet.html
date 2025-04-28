@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mark Sheet</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: auto;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<h2>Mark Sheet</h2>
+
+<form id="markSheetForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br><br>
+    <label for="subject1">Subject 1:</label>
+    <input type="number" id="subject1" required><br><br>
+    <label for="subject2">Subject 2:</label>
+    <input type="number" id="subject2" required><br><br>
+    <label for="subject3">Subject 3:</label>
+    <input type="number" id="subject3" required><br><br>
+    <button type="button" onclick="generateMarkSheet()">Generate Mark Sheet</button>
+</form>
+
+<table id="markSheetTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Subject 1</th>
+            <th>Subject 2</th>
+            <th>Subject 3</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+function generateMarkSheet() {
+    const name = document.getElementById('name').value;
+    const subject1 = parseInt(document.getElementById('subject1').value);
+    const subject2 = parseInt(document.getElementById('subject2').value);
+    const subject3 = parseInt(document.getElementById('subject3').value);
+
+    const totalMarks = subject1 + subject2 + subject3;
+
+    const markSheetData = {
+        name: name,
+        subject1: subject1,
+        subject2: subject2,
+        subject3: subject3,
+        total: totalMarks
+    };
+
+    // Save mark sheet data to session storage
+    // sessionStorage.setItem('markSheet', JSON.stringify(markSheetData));
+    sessionStorage.setItem('marksheet' , JSON.stringify(markSheetData));
+
+    // Display mark sheet
+    displayMarkSheet(markSheetData);
+}
+
+function displayMarkSheet(data) {
+    const markSheetTable = document.getElementById('markSheetTable').getElementsByTagName('tbody')[0];
+    const newRow = markSheetTable.insertRow();
+
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    const cell5 = newRow.insertCell(4);
+
+    cell1.textContent = data.name;
+    cell2.textContent = data.subject1;
+    cell3.textContent = data.subject2;
+    cell4.textContent = data.subject3;
+    cell5.textContent = data.total;
+}
+</script>
+
+</body>
+</html>

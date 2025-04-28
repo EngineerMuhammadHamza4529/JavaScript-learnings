@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* Styles for the weather app */
+
+/* Styles for the e-commerce website */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0077FF;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+#cart {
+    float: right;
+    padding: 0.5rem 1rem;
+}
+
+main {
+    margin: 2rem;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1;
+}
+
+
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>E-commerce Website</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to our E-commerce Store</h1>
+            <div id="cart">Cart: 0 items</div>
+        </header>
+        <main>
+            <section id="products">
+                <!-- Product listings go here -->
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+    </html>
+    
+    
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+    const cart = document.getElementById('cart');
+    const products = document.getElementById('products');
+
+    let cartCount = 0;
+
+    // Sample product data
+    const productData = [
+        { name: 'Product 1', price: 19.99 },
+        { name: 'Product 2', price: 29.99 },
+        { name: 'Product 3', price: 39.99 },
+    ];
+
+    // Display products
+    productData.forEach((product, index) => {
+        const productDiv = document.createElement('div');
+        productDiv.classList.add('product');
+        productDiv.innerHTML = `
+            <h2>${product.name}</h2>
+            <p>Price: $${product.price}</p>
+            <button onclick="addToCart(${index})">Add to Cart</button>
+        `;
+        products.appendChild(productDiv);
+    });
+
+    // Add to cart function
+    window.addToCart = function (index) {
+        cartCount++;
+        cart.textContent = `Cart: ${cartCount} item${cartCount === 1 ? '' : 's'}`;
+    };
+});
+
+
+    </script>
+</body>
+</html>

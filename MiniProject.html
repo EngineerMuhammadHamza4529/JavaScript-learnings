@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+}
+
+#task-container {
+    margin-top: 20px;
+}
+
+#task {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-task {
+    padding: 5px 10px;
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+li {
+    margin: 10px 0;
+    padding: 5px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+    </style>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const taskInput = document.getElementById("task");
+    const addTaskButton = document.getElementById("add-task");
+    const taskList = document.getElementById("task-list");
+
+    addTaskButton.addEventListener("click", function() {
+        const taskText = taskInput.value.trim();
+        if (taskText !== "") {
+            const taskItem = document.createElement("li");
+            taskItem.textContent = taskText;
+            taskList.appendChild(taskItem);
+            taskInput.value = "";
+        }
+    });
+
+    taskInput.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            addTaskButton.click();
+        }
+    });
+});
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div id="task-container">
+            <input type="text" id="task" placeholder="Add a new task">
+            <button id="add-task">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

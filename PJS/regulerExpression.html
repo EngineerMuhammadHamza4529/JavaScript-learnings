@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <style>
+        #nameerror{
+            color: red;
+        }
+    </style>
+<body>
+    <form>
+        <label>Name</label>
+        <input type="text" id="name">
+        <span id="nameerror"></span>
+        <br>
+        <br>
+        <button type="button" onclick="validation()">Submit</button>
+    </form>
+    
+    <script>
+    function validation() {
+        var name = document.getElementById("name").value;
+    
+        var nameError = document.getElementById("nameerror");
+      
+        nameError.textContent = "";
+     
+        // Check if name is empty
+        if (name.trim() === "") {
+            nameError.textContent = "Name cannot be empty";
+     
+        }
+    }
+
+    </script>
+    
+</body>
+</html>

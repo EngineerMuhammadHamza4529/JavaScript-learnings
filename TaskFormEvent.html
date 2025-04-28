@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <script>
+        function abc1()
+        {
+            document.getElementById("name").style.background="pink";
+           
+        }
+        function abc2(){
+            document.getElementById("password").style.background="green";
+        }
+        function xyz()
+        {
+            document.getElementById("name").style.background="";
+            document.getElementById("password").style.background="";
+        }
+
+        function submitForm(action) 
+        {
+            if (action === 'submit') 
+            {
+                alert("Submit Successful!");
+
+            } 
+            else if (action === 'cancel') 
+            {
+                alert("Cancelled");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form>
+        <label>Name</label>
+        <input type="text" id="name" onfocus="abc1()" onblur="xyz()">
+        <br>
+        <br>
+
+        <label>Password</label>
+        <input type="password" id="password" onfocus="abc2()" onblur="xyz()">
+        <br>
+        <br>
+
+        <button id="submit" onclick="submitForm('submit')">Submit</button>
+        <button id="cancel" onclick="submitForm('cancel')">Cancel</button>
+    </form>
+
+  
+
+
+
+</body>
+</html> 
+
+
+
+<!-- 
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+         document.addEventListener("DOMContentLoaded", function() 
+         {
+             document.getElementById("myButton").addEventListener("click", function() 
+             {
+                 alert("Button clicked!");
+             });
+         });
+     </script>
+ </head>
+ <body>
+     <button id="myButton">Click me</button>
+ </body>
+ </html>
+ -->
+
+
+
+
+
+
+

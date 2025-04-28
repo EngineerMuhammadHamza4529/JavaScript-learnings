@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+document.createElement(element)	Create an HTML element
+document.removeChild(element)	Remove an HTML element
+document.appendChild(element)	Add an HTML element
+document.replaceChild(new, old)	Replace an HTML element
+ -->
+
+
+<script>
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = "This is a dynamically created paragraph.";
+    document.body.appendChild(newParagraph);
+</script>
+
+
+
+</body>
+</html>

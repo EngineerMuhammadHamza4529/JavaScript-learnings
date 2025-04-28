@@ -1,0 +1,109 @@
+       
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    background: rgb(10, 14, 1);
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0 ;
+}
+header a{
+   
+    color: white;
+    padding: 15px;
+}
+
+#logo{
+    margin:  0 auto;
+}
+#menu li{
+    padding: 10px;
+    font-size: 25px;
+}
+#social-link li{
+    padding: 10px;
+}
+
+
+#main{
+    display: flex;
+}
+
+aside{
+    flex: 0 0 20vw;
+    background: beige;
+    padding: 10px;
+}
+
+
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+
+article {
+    padding: 10px;
+}
+
+aside ul a {
+    color: blueviolet;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid gray;
+}
+
+aside img{
+    width: 100%;
+    padding: 10px;
+   
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-box{
+    border: 1px solid #eee;
+    padding: 10px;
+   flex-basis: 32%;
+   max-width: 500px;
+  
+}
+
+.service-box img{
+    width: 100%;
+}
+
+.call-to-action a{
+    background: gray;
+    color: #fff;
+    padding: 8px 13px;
+}
+
+
+footer{
+    background: rgb(10, 14, 1);
+    color: white;
+    text-align: center;
+    padding: 20px 0; 
+}

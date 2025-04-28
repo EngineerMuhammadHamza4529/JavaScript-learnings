@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="myImage" src="imgc.jpg">
+</body>
+<script>
+  const image = document.getElementById('myImage');
+  image.addEventListener('load', function() {
+    alert('Image loaded!');
+  });
+</script>
+
+
+
+
+<!-- <form id="myForm">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name "password" placeholder="Password">
+    <input type="submit" value="Submit">
+  </form>
+  
+  <script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from actually submitting
+      alert('Form submitted!');
+    });
+  </script> -->
+
+
+
+
+  <!-- <input type="checkbox" id="myCheckbox">
+<label for="myCheckbox">Check me</label>
+
+<script>
+  const checkbox = document.getElementById('myCheckbox');
+  checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+      alert('Checkbox is checked');
+    } else {
+      alert('Checkbox is unchecked');
+    }
+  });
+</script> -->
+
+
+
+<!-- <div id="myDiv" style="width: 100px; height: 100px; background-color: green;"></div>
+
+<script>
+  const div = document.getElementById('myDiv');
+  div.addEventListener('dblclick', function() {
+    div.style.backgroundColor = 'red';
+  }); -->
+
+
+
+  <div id="myScrollableDiv" style="height: 200px; overflow: scroll;">
+    Scroll down to trigger the event.
+  </div>
+  
+  <script>
+    const scrollableDiv = document.getElementById('myScrollableDiv');
+    scrollableDiv.addEventListener('scroll', function() {
+      console.log('Scrolled!');
+    });
+  </script>
+</script>
+</body>
+</html>

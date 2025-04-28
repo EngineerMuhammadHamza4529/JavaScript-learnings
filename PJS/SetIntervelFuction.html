@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+        <script>
+        function myFunction() {
+        console.log("Function executed at each interval");
+        }
+        setInterval(myFunction, 2000); // Execute myFunction every 2000 milliseconds (2 seconds)
+                
+                
+        setInterval(function() {
+        console.log("Function executed at each interval");
+        }, 2000); // Execute the anonymous function every 2000 milliseconds (2 seconds)
+
+        
+
+        setInterval(() => {
+        console.log("Function executed at each interval");
+        }, 2000); // Execute the arrow function every 2000 milliseconds (2 seconds)
+
+        </script>
+
+        
+</body>
+</html>

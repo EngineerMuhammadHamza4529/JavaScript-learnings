@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example: appendChild</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button onclick="addListItem()">Add New Item</button>
+    <script>
+        function addListItem() {
+            // Create a new <li> element
+            const newItem = document.createElement('li');
+            newItem.textContent = "New Item";
+
+            // Append the new item to the list
+            const list = document.getElementById('myList');
+            list.appendChild(newItem);
+        }
+    </script>
+</body>
+</html>

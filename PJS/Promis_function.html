@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+
+
+    <!--when condition is True-->
+<!-- 
+    <script>
+        let Result = false;
+
+        let prom = new Promise(function(resolve, reject) {
+            if (Result)
+            {
+                resolve("I am successful!");
+            } else 
+            {
+                reject("I am not successful!");
+            }
+        });
+
+        let onfulfilment = (Result) =>
+        {
+            console.log(Result);
+        }
+        let onRejection = (error) =>
+        {
+            console.log(error);
+        }
+
+        prom.then(onfulfilment);
+        prom.catch(onRejection);
+    
+    </script> -->
+
+
+    <!--when condition is False-->
+
+      <!-- <script>
+        let Result = false;
+
+        let prom = new Promise(function(resolve, reject) {
+            if (Result)
+            {
+                resolve("I am successful!");
+            } else 
+            {
+                reject("I am not successful!");
+            }
+        });
+
+      console.log(prom);
+    </script> -->
+
+
+          <!-- <script>
+            function prom(reslut)
+            {
+
+              return new Promise(function(resolve , reject)
+              {
+                  if(reslut)
+                  {
+                    resolve("😎 Wolf 🐈🐆🐾");
+                  }
+                  else{
+                    reject("The wolf, also known as the gray wolf or grey wolf,");
+                  }
+              });
+
+            }
+
+            let a = (data) => {
+              console.log(data);
+            }
+
+            let b = (error) => {
+              console.log(error);
+            }
+
+            prom(true).then(a);
+            prom(true).catch(b);
+            
+          </script> -->
+
+
+
+          <script>
+            function prom(result) {
+                return new Promise(function(resolve, reject) {
+                    console.log("Fetching Data ✋ Please Wait 🙌");
+                    setTimeout(() => {
+                        if (result) {
+                            resolve("I am Successful 🙋‍♂️🎂😊");
+                        } else {
+                            reject("Error");
+                        }
+                    }, 8000);
+                });
+            }
+        
+            let onfulfill = (result) => {
+                alert(result);
+            }
+        
+            let onreject = (error) => {
+                alert(error);
+            }
+        
+           prom(true).then(onfulfill);
+           prom(false).catch(onreject);
+        </script>
+        
+
+        <!-- <script>
+          function hello(data)
+          {
+            return new Promise(function(resolve, reject) {
+                    console.log("Fetching Data ✋ Please Wait 🙌");
+                    setTimeout(() => {
+                        if (data) {
+                            resolve("I am Successful 🙋‍♂️🎂😊");
+                        } else {
+                            reject("Error");
+                        }
+                    }, 8000);
+                });
+          }
+          let onfulfill = (data) => {
+                console.log(data);
+            }
+            let onreject = (error) => {
+                console.log(error);
+            }
+            hello(true).then(onfulfill)
+            hello(false).catch(onreject)
+        </script> -->
+
+
+    
+
+
+     
+</body>
+</html>

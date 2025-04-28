@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+</head>
+<body>
+    <h2>Image Classification</h2>
+
+    <!-- Image for Classification -->
+    <img id="img" src="cat.jpg" width="300" crossorigin="anonymous" alt="Cat Image">
+
+    <h3 id="result">Prediction: </h3>
+
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <!-- Load the MobileNet model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
+
+    <script>
+        async function classifyImage() {
+            const img = document.getElementById('img');
+            const result = document.getElementById('result');
+
+            try {
+                // Load the MobileNet model
+                const model = await mobilenet.load();
+                console.log("Model Loaded Successfully");
+
+                // Classify the image
+                const predictions = await model.classify(img);
+
+                console.log(predictions); // Log results in the console
+                
+                // Show only class name (no probability, no "true cat" text)
+                result.innerText = `Prediction: ${predictions[0].className}`;
+            } catch (error) {
+                console.error("Error in classification:", error);
+                result.innerText = "Error in classification!";
+            }
+        }
+
+        // Run classification when the page loads
+        window.onload = classifyImage;
+    </script>
+</body>
+</html>

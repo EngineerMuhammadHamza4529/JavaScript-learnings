@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>Name</label>
+        <input type="text" id="name"><br><br>
+        <button type="button" onclick="create()">Create</button>
+        <button type="button" onclick="dlt()">Delete</button>
+        <button type="button" onclick="Edit()">Edit</button>
+    </form>
+
+    
+
+    <ul id ="demo"></ul>
+
+    <script>
+        function create()
+        {
+            var name = document.getElementById('name').value;
+
+            const b = document.createElement('li');
+            b.textContent = `Name: ${name}`;
+
+            const a = document.getElementById('demo');
+            a.appendChild(b);
+
+            document.getElementById('name').value = '';
+
+        }    
+
+
+        function dlt() {
+            const studentList = document.getElementById('demo');
+            if (studentList.firstChild) {
+                studentList.removeChild(studentList.firstChild); 
+            } else {
+                alert("No students to remove!");
+            }
+        }
+
+        function Edit() {
+            const name = document.getElementById('name').value;
+            const newStudent = document.createElement('li');
+            newStudent.textContent = `Name: ${name}`;
+
+            const studentList = document.getElementById('demo');
+            if (studentList.firstChild) {
+                studentList.replaceChild(newStudent, studentList.firstChild); 
+            } 
+            else 
+            {
+                alert("No students to replace!");
+            }
+            document.getElementById('name').value = '';
+        }
+    </script>
+</body>
+</html>

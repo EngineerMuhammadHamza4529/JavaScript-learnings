@@ -1,0 +1,47 @@
+*{
+    background-color: bisque;
+}
+
+h1{
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+#menu ul {
+    list-style: none;
+   
+}
+#menu a{
+    text-decoration: none;
+    
+}
+
+#menu li{
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+}
+
+#list ul {
+    list-style: none;
+   
+}
+#list a{
+    text-decoration: none;
+    
+}
+
+#list li{
+    display: inline;
+    padding: 10px;
+    margin: 10px;
+}
+
+#content
+{
+    border: 2px solid;   
+   
+}
+
+

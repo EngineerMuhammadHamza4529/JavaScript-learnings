@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+//     // Set data in session storage
+// sessionStorage.setItem('name', 'Azan');
+// sessionStorage.setItem('Lastname' , "Ahmed");
+// localStorage.setItem('Midlename' , "Abdul");
+
+
+
+// // Retrieve data from session storage 
+// var username = sessionStorage.getItem('name');
+// let lastname = sessionStorage.getItem('Lastname');
+// const midlename = localStorage.getItem('Midlename')
+
+
+
+
+//Project Mini:
+
+        // Example for Local Storage
+        // Setting data in local storage
+        localStorage.setItem('username', 'John');
+        localStorage.setItem('isLoggedIn', 'true');
+
+        // Retrieving data from local storage
+        const username = localStorage.getItem('username');
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+        console.log(username); // Output: John
+        console.log(isLoggedIn); // Output: true
+
+        // Example for Session Storage
+        // Setting data in session storage
+        sessionStorage.setItem('cartTotal', '50');
+        sessionStorage.setItem('currency', 'USD');
+
+        // Retrieving data from session storage
+        const cartTotal = sessionStorage.getItem('cartTotal');
+        const currency = sessionStorage.getItem('currency');
+
+        console.log(cartTotal); // Output: 50
+        console.log(currency); // Output: USD
+
+   </script>
+
+   
+
+</body>
+</html>

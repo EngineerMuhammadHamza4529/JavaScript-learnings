@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+
+<!-- Here's the example using only ES6 classes without a constructor: -->
+
+    <!-- <script>
+        // Define a class for creating Person objects
+class Person {
+  name;
+  age;
+
+  // Method defined inside the class
+  greet() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+// Create instances of Person and initialize properties directly
+const person1 = new Person();
+person1.name = 'Alice';
+person1.age = 30;
+
+const person2 = new Person();
+person2.name = 'Bob';
+person2.age = 25;
+
+console.log(person1.greet()); // Output: Hello, my name is Alice and I am 30 years old.
+console.log(person2.greet()); // Output: Hello, my name is Bob and I am 25 years old.
+
+    </script> -->
+
+
+
+
+    <!-- Here's the example using only ES6 classes with a constructor: -->
+
+<!--     
+    <script>
+        // Define a class for creating Person objects
+    class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+  // Method defined inside the class
+    greet() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    }
+    }
+
+// Create instances of Person
+    const person1 = new Person('Alice', 30);
+    const person2 = new Person('Bob', 25);
+
+    console.log(person1.greet()); // Output: Hello, my name is Alice and I am 30 years old.
+    console.log(person2.greet()); // Output: Hello, my name is Bob and I am 25 years old.
+
+    </script> -->
+
+    <!-- <script>
+        class car {
+            constructor(carname , carmodel ,carcolor , carwheel )
+            {
+                this.carName = carname;
+                this.carModel = carmodel;
+                this.carColor = carcolor;
+                this.carWheel = carwheel;
+            
+            }
+             helo()
+             {
+                    document.write(`${this.carName}  ${this.carModel} ${this.carWheel}  ${this.carColor} `);
+             } 
+        }
+
+        const Honda = new car("Honda" , 2024 , 4 , "Blackii 😋");
+        const Toyota = new car("Toyotaa" , 2025 , 4 , "Grayiiee 😋");
+
+        Honda.helo();
+        Toyota.helo();
+
+
+        class Toyota {
+            constructor(carname , carmodel ,carcolor , carwheel )
+            {
+                this.carName = carname;
+                this.carModel = carmodel;
+                this.carColor = carcolor;
+                this.carWheel = carwheel;
+            
+            }
+             helo2()
+             {
+                    document.write(`${this.carName}  ${this.carModel} ${this.carWheel}  ${this.carColor} `);
+             } 
+        }
+
+        const Honda = new car("Honda" , 2024 , 4 , "Blackii 😋");
+        const Toyota = new car("Toyotaa" , 2025 , 4 , "Grayiiee 😋");
+
+        Honda.helo();
+        Toyota.helo2();
+    </script> -->
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+
+<script>
+    // Define a class for creating Car objects
+    class Car {
+        constructor(carName, carModel, carColor, carWheel) {
+            this.carName = carName;
+            this.carModel = carModel;
+            this.carColor = carColor;
+            this.carWheel = carWheel;
+        }
+
+        displayDetails() {
+            return `${this.carName} ${this.carModel} ${this.carWheel} ${this.carColor}`;
+        }
+    }
+
+    // Define a subclass Truck that inherits from Car
+    class Truck extends Car {
+        constructor(carName, carModel, carColor, carWheel, truckCapacity) {
+            super(carName, carModel, carColor, carWheel);
+            this.truckCapacity = truckCapacity;
+        }
+
+        displayDetails() {
+            return `${super.displayDetails()} ${this.truckCapacity}`;
+        }
+    }
+
+    // Create instances of Car and Truck:
+    const hondaCar = new Car("Honda", 2024, "Blackii 😋", 4);
+    const toyotaTruck = new Truck("Toyota", 2025, "Grayiiee 😋", 4, "Large");
+
+    // Display details
+    console.log(hondaCar.displayDetails()); // Output: Honda 2024 4 Blackii 😋
+    console.log(toyotaTruck.displayDetails()); // Output: Toyota 2025 4 Grayiiee 😋 Large
+</script>
+            
+</body>
+</html>
+
+
+
+            
+</body>
+</html>

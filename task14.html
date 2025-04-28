@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if statement..</title>
+    <!-- <script>
+        //var a=5;
+        //var b=3;
+        //if(a>b){
+          //  document.write("true");
+        //}
+
+       // var a=100;
+        //var b=100;
+        //if(a==b){
+          //  document.write("statment is true..");
+        //}
+
+    // multiple if else:
+
+   // var x=100;
+    //if(x==100){
+    //document.write("x is same");
+    //}
+    //else {
+      //  document.write("x is not same ");
+
+    //}
+
+    // multiple else if..
+
+    // var per = 55;
+    
+    // if(per >=80 && per<=100){
+    //     document.write("you are in merit");
+    // }
+    // else if(per >= 45 && per<= 80)
+    // {
+    //     document.write("grade A");
+    // }
+    // else if(per >=33 && per <= 45)
+    // {
+    //     document.write("grade B");
+    // }
+    // else if(per >=33 && per<=45)
+    // {
+    //     document.write("Grade C");
+    // }
+    // else if(per <33){
+    //     document.write("fail.");
+    // }
+    // else{
+    //     document.write("please enter valid percentage..");
+    // }
+
+    </script> -->
+
+</head>
+
+<body>
+
+
+
+
+        <script>
+            var userInput = prompt("Please enter the time (in 12-hour format, e.g., 8 AM):");
+        var time = userInput.toLowerCase();
+
+        if (time.includes("am")) {
+            var hour = parseInt(time);
+            if (hour < 8) {
+                document.write("Good Night");
+            } else if (hour < 12) {
+                document.write("Good Morning");
+            } else {
+                document.write("Invalid input. Please enter the time in 12-hour format (e.g., 8 AM).");
+            }
+        } else if (time.includes("pm")) {
+            var hour = parseInt(time);
+            if (hour < 1) {
+                document.write("Good Morning");
+            } else if (hour < 5) {
+                document.write("Good Afternoon");
+            } else if (hour < 8) {
+                document.write("Good Evening");
+            } else {
+                document.write("Good Night");
+            }
+        } else {
+            document.write("Invalid input. Please enter the time in 12-hour format (e.g., 8 AM).");
+        }
+
+        </script>
+</body>
+
+</html>

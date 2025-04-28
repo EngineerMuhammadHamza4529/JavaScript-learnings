@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<!--All data fake data ok not confirm insert delete update ok just like fake data. 
+    ( all implement with php with xamp server)-->
+
+    
+    <script>
+        // Function to handle errors
+        // function handleErrors(response) 
+        // {
+        // if (!response.ok) {
+        //     throw Error(response.statusText);
+        // }
+        // return response;
+        // }
+
+// Function to fetch data
+// function fetchData(url) {
+//     return fetch(url)
+//         .then(handleErrors)
+//         .then(response => response.json())
+//         .catch(error => console.error('Error fetching data:', error));
+// }
+
+// // Function to create data
+// function createData(url, data) {
+//     return fetch(url, {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//     .then(handleErrors)
+//     .then(response => response.json())
+//     .catch(error => console.error('Error creating data:', error));
+// }
+
+// // Function to update data
+// function updateData(url, data) {
+//     return fetch(url, {
+//         method: 'PUT',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//     .then(handleErrors)
+//     .then(response => response.json())
+//     .catch(error => console.error('Error updating data:', error));
+// }
+
+// // Function to delete data
+// function deleteData(url) {
+//     return fetch(url, {
+//         method: 'DELETE',
+//     })
+//     .then(handleErrors)
+//     .then(response => response.json())
+//     .catch(error => console.error('Error deleting data:', error));
+// }
+
+// // Example usage:
+// const apiUrl = 'https://api.example.com/data';
+
+// // Fetch data
+// fetchData(apiUrl)
+//     .then(data => console.log('Fetched data:', data))
+//     .catch(error => console.error('Error fetching data:', error));
+
+// // Create data
+// const newData = { name: 'New Entry', value: 42 };
+// createData(apiUrl, newData)
+//     .then(createdData => console.log('Created data:', createdData))
+//     .catch(error => console.error('Error creating data:', error));
+
+// // Update data
+// const updatedData = { id: 123, name: 'Updated Entry', value: 50 };
+// updateData(`${apiUrl}/${updatedData.id}`, updatedData)
+//     .then(updatedData => console.log('Updated data:', updatedData))
+//     .catch(error => console.error('Error updating data:', error));
+
+// // Delete data
+// const entryIdToDelete = 456;
+// deleteData(`${apiUrl}/${entryIdToDelete}`)
+//     .then(deletedData => console.log('Deleted data:', deletedData))
+//     .catch(error => console.error('Error deleting data:', error));
+
+    </script>
+</body>
+</html>

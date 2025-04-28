@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+</head>
+<body>
+    <h2>Upload an Image for Classification</h2>
+    <input type="file" id="imageUpload" accept="image/*">
+    <br><br>
+    <img id="imagePreview" width="200">
+    <br><br>
+    <button id="classifyButton">Classify Image</button>
+    <h3 id="result"></h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="text.js"></script>
+</body>
+</html>

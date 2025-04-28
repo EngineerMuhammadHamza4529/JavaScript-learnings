@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJS</title>
+</head>
+<body>
+    <script>
+
+        //Just like Normatl Function :
+
+        // function test()
+        // {
+        //     return  "Hello Gentlmen";
+        // }
+
+        // console.log(test());
+
+
+        //async Function    OR Promiss Function
+
+    //    async function test()
+    //     {
+    //         return "Hello World";
+    //     }
+    //     console.log(test());
+
+
+
+                //With then and catch:
+                async function test(success = true) {
+                if (success) {
+                    return "Hello World"; // This resolves the promise
+                } else {
+                    throw new Error("An error occurred"); // This rejects the promise
+                }
+            }
+
+                     // Using one call to handle both cases
+                    test(true)
+                        .then((data) => {
+                            alert(data); // Outputs: Hello World
+                        })
+                        .catch((error) => {
+                            alert("Error:", error.message); // Will not execute in this case
+                        });
+
+                    // Testing the error scenario
+                    test(false)
+                        .then((data) => {
+                            console.log(data); // Will not execute in this case
+                        })
+                        .catch((error) => {
+                            alert("Error:", error.message); // Outputs: Error: An error occurred
+                        });
+
+
+
+    </script>
+
+
+</body>
+</html>

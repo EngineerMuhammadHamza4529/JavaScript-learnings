@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+</head>
+<body>
+    <h2>Image Classification</h2>
+
+    <!-- Image for Classification -->
+    <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" width="300" crossorigin="anonymous" alt="Cat Image">
+
+    <h3 id="result">Prediction: </h3>
+
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <!-- Load the MobileNet model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@latest"></script>
+
+    <script>
+        function classifyImage() {
+            const img = document.getElementById('img');
+            const result = document.getElementById('result');
+
+            mobilenet.load().then(model => {
+                model.classify(img).then(predictions => {
+                    result.innerText = `Prediction: ${predictions[0].className}`;
+                });
+            });
+        }
+
+        window.onload = classifyImage;
+    </script>
+</body>
+</html>
